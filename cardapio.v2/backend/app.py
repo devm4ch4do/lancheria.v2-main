@@ -28,6 +28,13 @@ def diagnostico_imagens():
         "xbacon_existe": (pasta / "xbacon.jpg").is_file()
     })
 
+@app.route("/teste-imagem")
+def teste_imagem():
+    return send_from_directory(
+        PASTA_FRONTEND / "img_proj_cardápio",
+        "xbacon.jpg"
+    )
+
 # Abre uma conexão PostgreSQL usando variáveis de ambiente, sem senha fixa no código.
 def conectar_banco():
     database_url = os.getenv("DATABASE_URL")
