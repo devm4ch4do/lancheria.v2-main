@@ -18,6 +18,16 @@ app = Flask(__name__, static_folder=str(PASTA_FRONTEND), static_url_path="")
 app.config["MAX_CONTENT_LENGTH"] = 16 * 1024
 TAXA_ENTREGA = Decimal("5.00")
 
+@app.route("/diagnostico-imagens")
+def diagnostico_imagens():
+    pasta = PASTA_FRONTEND / "img_proj_cardápio"
+
+    return jsonify({
+        "frontend_existe": PASTA_FRONTEND.is_dir(),
+        "pasta_imagens_existe": pasta.is_dir(),
+        "xbacon_existe": (pasta / "xbacon.jpg").is_file()
+    })
+
 # Abre uma conexão PostgreSQL usando variáveis de ambiente, sem senha fixa no código.
 def conectar_banco():
     database_url = os.getenv("DATABASE_URL")
