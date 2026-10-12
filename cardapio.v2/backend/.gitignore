@@ -1,0 +1,6 @@
+# Impede o envio de senhas e dados locais do ambiente Python para o Git.
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]

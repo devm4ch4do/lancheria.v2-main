@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Machado Burger</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Apresenta a marca e a chamada principal do cardápio. -->
+    <header>
+        <div class="header-brand">
+            <img class="logo" src="img_proj_cardápio/logo lancheria.png" alt="Logo do Machado Burger">
+            <div class="brand-copy">
+                <h1> Machado Burger</h1>
+                <p>Seu hambúrguer favorito está aqui!</p>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Contém categorias e produtos, que o JavaScript atualiza usando a API. -->
+    <main>
+
+        <!-- Categoria -->
+        <section class="categoria">
+
+            <h2>🍔 Hambúrgueres</h2>
+
+            <!-- Produto -->
+            <div class="produto">
+
+                <div>
+                    <h3>X-Bacon</h3>
+
+                    <p>
+                        Pão, hambúrguer, queijo, bacon e molho especial.
+                    </p>
+
+                    <img src="img_proj_cardápio\xbacon.jpg" alt="X-Bacon">
+
+                    <strong>R$ 18,00</strong>
+                </div>
+
+                <div class="controle-quantidade" data-produto="X-Bacon" aria-label="Quantidade de X-Bacon">
+                    <button class="botao-quantidade botao-quantidade--menos" type="button"
+                        onclick="alterarQuantidade('X-Bacon', 18, -1)" aria-label="Diminuir X-Bacon">
+                        -
+                    </button>
+                    <span id="quantidade-X-Bacon">0</span>
+                    <button class="botao-quantidade" type="button" onclick="adicionarProduto('X-Bacon', 18)"
+                        aria-label="Adicionar X-Bacon">
+                        +
+                    </button>
+                </div>
+
+            </div>
+
+
+            <!-- Produto -->
+            <div class="produto">
+
+                <div>
+                    <h3>X-Salada</h3>
+
+                    <p>
+                        Pão, hambúrguer, queijo, alface, tomate e molho.
+                    </p>
+
+                    <img src="img_proj_cardápio\xsalada.jpg" alt="X-Salada">
+
+                    <strong>R$ 16,00</strong>
+                </div>
+
+                <div class="controle-quantidade" data-produto="X-Salada" aria-label="Quantidade de X-Salada">
+                    <button class="botao-quantidade botao-quantidade--menos" type="button"
+                        onclick="alterarQuantidade('X-Salada', 16, -1)" aria-label="Diminuir X-Salada">
+                        -
+                    </button>
+                    <span id="quantidade-X-Salada">0</span>
+                    <button class="botao-quantidade" type="button" onclick="adicionarProduto('X-Salada', 16)"
+                        aria-label="Adicionar X-Salada">
+                        +
+                    </button>
+                </div>
+
+            </div>
+
+
+            <!-- Produto -->
+            <div class="produto">
+
+                <div>
+                    <h3>X-Tudo</h3>
+
+                    <p>
+                        Hambúrguer, queijo, bacon, ovo, presunto e salada.
+                    </p>
+
+                    <img src="img_proj_cardápio\xtudo.jpg" alt="X-Tudo">
+
+                    <strong>R$ 25,00</strong>
+                </div>
+
+                <div class="controle-quantidade" data-produto="X-Tudo" aria-label="Quantidade de X-Tudo">
+                    <button class="botao-quantidade botao-quantidade--menos" type="button"
+                        onclick="alterarQuantidade('X-Tudo', 25, -1)" aria-label="Diminuir X-Tudo">
+                        -
+                    </button>
+                    <span id="quantidade-X-Tudo">0</span>
+                    <button class="botao-quantidade" type="button" onclick="adicionarProduto('X-Tudo', 25)"
+                        aria-label="Adicionar X-Tudo">
+                        +
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Categoria -->
+        <section class="categoria">
+
+            <h2>🍟 Porções</h2>
+
+            <div class="produto">
+
+                <div>
+                    <h3>Batata Frita</h3>
+
+                    <p>
+                        Porção de batata frita crocante.
+                    </p>
+
+                    <img src="img_proj_cardápio/batata_simples.jpg" alt="Batata Frita">
+
+                    <strong>R$ 15,00</strong>
+                </div>
+
+                <div class="controle-quantidade" data-produto="Batata Frita" aria-label="Quantidade de Batata Frita">
+                    <button class="botao-quantidade botao-quantidade--menos" type="button"
+                        onclick="alterarQuantidade('Batata Frita', 15, -1)" aria-label="Diminuir Batata Frita">
+                        -
+                    </button>
+                    <span id="quantidade-Batata-Frita">0</span>
+                    <button class="botao-quantidade" type="button" onclick="adicionarProduto('Batata Frita', 15)"
+                        aria-label="Adicionar Batata Frita">
+                        +
+                    </button>
+                </div>
+
+            </div>
+
+            
+            <div class="produto">
+
+                <div>
+                    <h3>Batata Frita c/ cheddar</h3>
+
+                    <p>
+                        Porção de batata frita crocante com queijo cheddar e bacon.
+                    </p>
+
+                    <img src="img_proj_cardápio/batata_cheddar.png" alt="Batata Frita c/ Cheddar">
+
+                    <strong>R$ 20,00</strong>
+                </div>
+
+                <div class="controle-quantidade" data-produto="Batata Frita c/ Cheddar" aria-label="Quantidade de Batata Frita c/ Cheddar">
+                    <button class="botao-quantidade botao-quantidade--menos" type="button"
+                        onclick="alterarQuantidade('Batata Frita c/ Cheddar', 20, -1)"
+                        aria-label="Diminuir Batata Frita c/ Cheddar">
+                        -
+                    </button>
+                    <span id="quantidade-Batata-Frita-c-Cheddar">0</span>
+                    <button class="botao-quantidade" type="button"
+                        onclick="adicionarProduto('Batata Frita c/ Cheddar', 20)"
+                        aria-label="Adicionar Batata Frita c/ Cheddar">
+                        +
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Categoria -->
+        <section class="categoria">
+
+            <h2>🥤 Bebidas</h2>
+
+            <div class="produto">
+
+                <div>
+                    <h3>Coca-Cola 2L</h3>
+
+                    <p>
+                        Coca-Cola 2 litros.
+                    </p>
+                    
+                    <img src="img_proj_cardápio/coca_cola_2l.jpg" alt="Coca-Cola 2 litros">
+
+                    <strong>R$ 12,00</strong>
+                </div>
+
+                <div class="controle-quantidade" data-produto="Coca-Cola 2l" aria-label="Quantidade de Coca-Cola 2 litros">
+                    <button class="botao-quantidade botao-quantidade--menos" type="button"
+                        onclick="alterarQuantidade('Coca-Cola 2l', 12, -1)" aria-label="Diminuir Coca-Cola 2 litros">
+                        -
+                    </button>
+                    <span>0</span>
+                    <button class="botao-quantidade" type="button" onclick="adicionarProduto('Coca-Cola 2l', 12)"
+                        aria-label="Adicionar Coca-Cola 2 litros">
+                        +
+                    </button>
+                </div>
+
+            </div>
+
+
+            <div class="produto">
+
+
+                 <div>
+                    <h3>Coca-Cola 2l zero</h3>
+
+                    <p>
+                        Coca-Cola 2l zero.
+                    </p>
+                    
+                    <img src="img_proj_cardápio/coca_cola_2l_zero.jpg" alt="Coca-Cola 2 litros zero">
+                    
+                    <strong>R$ 12,00</strong>
+                </div>
+
+                <div class="controle-quantidade" data-produto="Coca-Cola 2l zero" aria-label="Quantidade de Coca-Cola 2 litros zero">
+                    <button class="botao-quantidade botao-quantidade--menos" type="button"
+                        onclick="alterarQuantidade('Coca-Cola 2l zero', 12, -1)" aria-label="Diminuir Coca-Cola 2 litros zero">
+                        -
+                    </button>
+                    <span>0</span>
+                    <button class="botao-quantidade" type="button" onclick="adicionarProduto('Coca-Cola 2l zero', 12)"
+                        aria-label="Adicionar Coca-Cola 2 litros zero">
+                        +
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="produto">
+
+                <div>
+                    <h3>Coca-Cola 350ml</h3>
+
+                    <p>
+                        Coca-Cola 350ml.
+                    </p>
+                    
+                    <img src="img_proj_cardápio/coca_cola_350ml.jpg" alt="Coca-Cola 350 ml">
+                    
+                    <strong>R$ 5,00</strong>
+                </div>
+
+                <div class="controle-quantidade" data-produto="Coca-Cola 350ml" aria-label="Quantidade de Coca-Cola 350ml">
+                    <button class="botao-quantidade botao-quantidade--menos" type="button"
+                        onclick="alterarQuantidade('Coca-Cola 350ml', 5, -1)" aria-label="Diminuir Coca-Cola 350ml">
+                        -
+                    </button>
+                    <span>0</span>
+                    <button class="botao-quantidade" type="button" onclick="adicionarProduto('Coca-Cola 350ml', 5)"
+                        aria-label="Adicionar Coca-Cola 350ml">
+                        +
+                    </button>
+                </div>
+            </div>
+
+            <div class="produto">
+
+                <div>
+                    <h3>Guaraná Antartica 2L</h3>
+
+                    <p>
+                        Guaraná Antartica 2L.
+                    </p>
+                    
+                    <img src="img_proj_cardápio/guarana_antartica_2l.jpg" alt="Guaraná Antarctica 2 litros">
+                    
+                    <strong>R$ 12,00</strong>
+                </div>
+
+                <div class="controle-quantidade" data-produto="Guaraná Antartica 2l" aria-label="Quantidade de Guaraná Antarctica 2 litros">
+                    <button class="botao-quantidade botao-quantidade--menos" type="button"
+                        onclick="alterarQuantidade('Guaraná Antartica 2l', 12, -1)" aria-label="Diminuir Guaraná Antarctica 2 litros">
+                        -
+                    </button>
+                    <span>0</span>
+                    <button class="botao-quantidade" type="button" onclick="adicionarProduto('Guaraná Antartica 2l', 12)"
+                        aria-label="Adicionar Guaraná Antarctica 2 litros">
+                        +
+                    </button>
+                </div>
+            </div>
+
+            <div class="produto">
+
+                <div>
+                    <h3>Fruki guaraná 2L</h3>
+
+                    <p>
+                        Fruki guaraná 2L.
+                    </p>
+                    
+                    <img src="img_proj_cardápio/fruki_guaraná_2l.png" alt="Fruki Guaraná 2 litros">
+                    
+                    <strong>R$ 10,00</strong>
+                </div>
+
+                <div class="controle-quantidade" data-produto="Fruki guaraná 2L" aria-label="Quantidade de Fruki guaraná 2 litros">
+                    <button class="botao-quantidade botao-quantidade--menos" type="button"
+                        onclick="alterarQuantidade('Fruki guaraná 2L', 10, -1)" aria-label="Diminuir Fruki guaraná 2 litros">
+                        -
+                    </button>
+                    <span>0</span>
+                    <button class="botao-quantidade" type="button" onclick="adicionarProduto('Fruki guaraná 2L', 10)"
+                        aria-label="Adicionar Fruki guaraná 2 litros">
+                        +
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="produto">
+
+                <div>
+                    <h3>Fruki guaraná 350 ml</h3>
+
+                    <p>
+                        Fruki guaraná 350 ml.
+                    </p>
+                    
+                    <img src="img_proj_cardápio/fruki_350ml.png" alt="Fruki Guaraná 350 ml">
+                    
+                    <strong>R$ 4,00</strong>
+                </div>
+
+                <div class="controle-quantidade" data-produto="Fruki guaraná 350 ml" aria-label="Quantidade de Fruki guaraná 350 ml">
+                    <button class="botao-quantidade botao-quantidade--menos" type="button"
+                        onclick="alterarQuantidade('Fruki guaraná 350 ml', 4, -1)" aria-label="Diminuir Fruki guaraná 350 ml">
+                        -
+                    </button>
+                    <span>0</span>
+                    <button class="botao-quantidade" type="button" onclick="adicionarProduto('Fruki guaraná 350 ml', 4)"
+                        aria-label="Adicionar Fruki guaraná 350 ml">
+                        +
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Atualiza visualmente o resumo depois que a pessoa escolhe as quantidades. -->
+        <button class="adicionar-pedido" type="button" onclick="atualizarPedido()">
+            Adicionar itens ao pedido
+        </button>
+
+
+        <!-- Carrinho -->
+        <section class="carrinho">
+
+            <h2>🛒 Seu pedido</h2>
+
+            <div id="lista-pedido">
+                <p>Nenhum produto adicionado.</p>
+            </div>
+
+            <h3>
+                Total: R$ <span id="total">0.00</span>
+            </h3>
+
+            
+            <!-- Define se o cliente vai retirar o pedido ou receber em casa. -->
+            <fieldset class="tipo-pedido campo-endereco campo-endereco--largo">
+                <legend>Como deseja receber?</legend>
+                <label class="opcao-pagamento">
+                    <input type="radio" name="tipo-pedido" value="Retirada" required>
+                    Retirada
+                </label>
+                <label class="opcao-pagamento">
+                    <input type="radio" name="tipo-pedido" value="Entrega" required>
+                    Entrega
+                </label>
+            </fieldset>
+
+
+            <form id="endereco-entrega" class="endereco-grid" novalidate>
+                <!-- Reúne os campos exigidos somente para pedidos com entrega. -->
+                <div id="campos-entrega" class="campos-entrega oculto">
+                    <label class="campo-endereco campo-endereco--largo">
+                        Rua
+                        <input type="text" name="rua" autocomplete="street-address" required>
+                    </label>
+
+                    <label class="campo-endereco">
+                        Número
+                        <input type="text" name="numero" inputmode="numeric" required>
+                    </label>
+
+                    <label class="campo-endereco">
+                        Bairro
+                        <input type="text" name="bairro" autocomplete="address-level3" required>
+                    </label>
+
+                    <label class="campo-endereco">
+                        Cidade
+                        <input type="text" name="cidade" autocomplete="address-level2" required>
+                    </label>
+
+                    <label class="campo-endereco">
+                        CEP
+                        <input type="text" name="cep" inputmode="numeric" autocomplete="postal-code"
+                            placeholder="00000-000" maxlength="9" required>
+                    </label>
+
+                    <label class="campo-endereco campo-endereco--largo">
+                        Complemento <span>(opcional)</span>
+                        <input type="text" name="complemento" autocomplete="address-line2">
+                    </label>
+                </div>
+
+                <div id="taxa-entrega" class="taxa-entrega campo-endereco campo-endereco--largo">
+                    <span>Taxa de entrega</span>
+                    <strong>R$ 5,00</strong>
+                </div>
+
+                <p id="erro-endereco" class="erro-endereco" role="alert"></p>
+
+                <!-- Reúne a forma de pagamento e suas opções adicionais. -->
+                <fieldset class="pagamento campo-endereco campo-endereco--largo">
+                    <legend>Forma de pagamento</legend>
+                    <label class="opcao-pagamento">
+                        <input type="radio" name="pagamento" value="Dinheiro" required>
+                        Dinheiro
+                    </label>
+                    <label class="opcao-pagamento">
+                        <input type="radio" name="pagamento" value="Na máquina" required>
+                        Na máquina
+                    </label>
+                </fieldset>
+
+                <div id="opcoes-maquina" class="opcoes-maquina campo-endereco campo-endereco--largo">
+                    <span>Escolha o tipo de pagamento</span>
+                    <div class="opcoes-maquina__lista">
+                        <label class="opcao-pagamento">
+                            <input type="radio" name="tipo-maquina" value="Débito">
+                            Débito
+                        </label>
+                        <label class="opcao-pagamento">
+                            <input type="radio" name="tipo-maquina" value="Crédito">
+                            Crédito
+                        </label>
+                        <label class="opcao-pagamento">
+                            <input type="radio" name="tipo-maquina" value="Pix">
+                            Pix
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Coleta os dados mínimos usados para salvar ou localizar o cliente. -->
+                <div class="dados-cliente campo-endereco campo-endereco--largo">
+                    <span class="titulo-secao">Dados do cliente</span>
+                    <div class="dados-cliente__grid">
+                        <label class="campo-endereco">
+                            Nome completo
+                            <input type="text" name="nome" autocomplete="name" required>
+                        </label>
+                        <label class="campo-endereco">
+                            Telefone
+                            <input type="tel" name="telefone" autocomplete="tel" placeholder="(00) 00000-0000" required>
+                        </label>
+                        <label class="campo-endereco">
+                            CPF
+                            <input type="text" name="cpf" inputmode="numeric" autocomplete="off"
+                                placeholder="000.000.000-00" maxlength="14" required>
+                        </label>
+                    </div>
+                </div>
+
+                <p id="erro-pedido" class="erro-endereco" role="alert"></p>
+            </form>
+
+            <!-- Valida, salva o pedido e abre uma mensagem preenchida no WhatsApp. -->
+            <button
+                class="whatsapp"
+                onclick="enviarWhatsApp()"
+            >
+                📱 Pedir pelo WhatsApp
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- Exibe os canais de contato e a identificação do estabelecimento. -->
+    <footer>
+
+        <p>endereço: Rua das Flores, 000 - Centro, Cidade Exemplo - CEP: 12345-678 | Telefone: (xx) xxxxx-xxxx</p>
+        <p>instagram: <a href="https://www.instagram.com/machadoburger" target="_blank">@machadoburger</a></p>
+        <p>machado burger &copy; 2026</p>
+    </footer>
+
+
+    <!-- Carrega a lógica do carrinho, validação e comunicação com a API. -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+# Flask entrega o site e implementa as rotas da API.
+Flask
+# Psycopg conecta o backend ao PostgreSQL com a biblioteca nativa incluída.
+psycopg[binary]
+# python-dotenv carrega as credenciais do arquivo .env local.
+python-dotenv
