@@ -35,6 +35,13 @@ def teste_imagem():
         "xbacon.jpg"
     )
 
+@app.route("/img_proj_cardápio/<path:nome_arquivo>")
+def servir_imagem(nome_arquivo):
+    return send_from_directory(
+        PASTA_FRONTEND / "img_proj_cardápio",
+        nome_arquivo
+    )
+
 # Abre uma conexão PostgreSQL usando variáveis de ambiente, sem senha fixa no código.
 def conectar_banco():
     database_url = os.getenv("DATABASE_URL")
