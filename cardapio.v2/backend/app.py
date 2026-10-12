@@ -20,6 +20,11 @@ TAXA_ENTREGA = Decimal("5.00")
 
 # Abre uma conexão PostgreSQL usando variáveis de ambiente, sem senha fixa no código.
 def conectar_banco():
+    database_url = os.getenv("DATABASE_URL")
+
+    if database_url:
+        return psycopg.connect(database_url)
+
     return psycopg.connect(
         host=os.getenv("DB_HOST", "localhost"),
         port=os.getenv("DB_PORT", "5432"),
@@ -27,7 +32,6 @@ def conectar_banco():
         user=os.getenv("DB_USER", "postgres"),
         password=os.getenv("DB_PASSWORD"),
     )
-
 
 # Exige um token secreto para as rotas que consultam ou alteram dados administrativos.
 def admin_required(funcao):
